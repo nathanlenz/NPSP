@@ -1,3 +1,9 @@
 .slds-button__extension {
     height: 1.25rem;
 }
+
+.sticky-section {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
