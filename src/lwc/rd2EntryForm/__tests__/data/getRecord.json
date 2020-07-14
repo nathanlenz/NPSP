@@ -1,0 +1,176 @@
+{
+  "apiName": "npe03__Recurring_Donation__c",
+  "childRelationships": {},
+  "id": "a093D000006mPW2QAM",
+  "lastModifiedById": "0053D000003xopAQAQ",
+  "lastModifiedDate": "2020-07-08T12:53:22.000Z",
+  "recordTypeId": "012000000000000AAA",
+  "recordTypeInfo": null,
+  "systemModstamp": "2020-07-08T12:53:22.000Z",
+  "fields": {
+    "Always_Use_Last_Day_Of_Month__c": {
+      "displayValue": null,
+      "value": false
+    },
+    "CloneSourceId": {
+      "displayValue": null,
+      "value": null
+    },
+    "ClosedReason__c": {
+      "displayValue": null,
+      "value": null
+    },
+    "CommitmentId__c": {
+      "displayValue": null,
+      "value": null
+    },
+    "CreatedById": {
+      "displayValue": null,
+      "value": "0053D000003xopAQAQ"
+    },
+    "CreatedDate": {
+      "displayValue": "7/8/2020, 5:48 AM",
+      "value": "2020-07-08T12:48:29.000Z"
+    },
+    "CurrentYearValue__c": {
+      "displayValue": null,
+      "value": null
+    },
+    "Day_of_Month__c": {
+      "displayValue": "15",
+      "value": "15"
+    },
+    "EndDate__c": {
+      "displayValue": null,
+      "value": null
+    },
+    "Id": {
+      "displayValue": null,
+      "value": "a093D000006mPW2QAM"
+    },
+    "InstallmentFrequency__c": {
+      "displayValue": null,
+      "value": 1
+    },
+    "IsDeleted": {
+      "displayValue": null,
+      "value": false
+    },
+    "LastActivityDate": {
+      "displayValue": null,
+      "value": null
+    },
+    "LastModifiedById": {
+      "displayValue": null,
+      "value": "0053D000003xopAQAQ"
+    },
+    "LastModifiedDate": {
+      "displayValue": "7/8/2020, 5:53 AM",
+      "value": "2020-07-08T12:53:22.000Z"
+    },
+    "LastReferencedDate": {
+      "displayValue": "7/8/2020, 2:12 PM",
+      "value": "2020-07-08T21:12:49.000Z"
+    },
+    "LastViewedDate": {
+      "displayValue": "7/8/2020, 2:12 PM",
+      "value": "2020-07-08T21:12:49.000Z"
+    },
+    "Name": {
+      "displayValue": null,
+      "value": "Carl Harvey $75 - Recurring"
+    },
+    "NextYearValue__c": {
+      "displayValue": null,
+      "value": null
+    },
+    "OwnerId": {
+      "displayValue": null,
+      "value": "0053D000003xopAQAQ"
+    },
+    "PaymentMethod__c": {
+      "displayValue": null,
+      "value": null
+    },
+    "RecurringType__c": {
+      "displayValue": "Open",
+      "value": "Open"
+    },
+    "StartDate__c": {
+      "displayValue": "1/15/2019",
+      "value": "2019-01-15"
+    },
+    "Status__c": {
+      "displayValue": "Active",
+      "value": "Active"
+    },
+    "SystemModstamp": {
+      "displayValue": "7/8/2020, 5:53 AM",
+      "value": "2020-07-08T12:53:22.000Z"
+    },
+    "npe03__Amount__c": {
+      "displayValue": "$75.00",
+      "value": 75
+    },
+    "npe03__Contact__c": {
+      "displayValue": null,
+      "value": "0033D00000fxQ27QAE"
+    },
+    "npe03__Date_Established__c": {
+      "displayValue": "2/4/2018",
+      "value": "2018-02-04"
+    },
+    "npe03__Donor_Name__c": {
+      "displayValue": null,
+      "value": "Carl Harvey"
+    },
+    "npe03__Installment_Amount__c": {
+      "displayValue": "$75.00",
+      "value": 75
+    },
+    "npe03__Installment_Period__c": {
+      "displayValue": "Monthly",
+      "value": "Monthly"
+    },
+    "npe03__Installments__c": {
+      "displayValue": null,
+      "value": null
+    },
+    "npe03__Last_Payment_Date__c": {
+      "displayValue": "12/15/2019",
+      "value": "2019-12-15"
+    },
+    "npe03__Next_Payment_Date__c": {
+      "displayValue": "7/15/2020",
+      "value": "2020-07-15"
+    },
+    "npe03__Open_Ended_Status__c": {
+      "displayValue": "Open",
+      "value": "Open"
+    },
+    "npe03__Organization__c": {
+      "displayValue": null,
+      "value": "0013D00000vDABvQAO"
+    },
+    "npe03__Paid_Amount__c": {
+      "displayValue": "$900.00",
+      "value": 900
+    },
+    "npe03__Recurring_Donation_Campaign__c": {
+      "displayValue": null,
+      "value": null
+    },
+    "npe03__Schedule_Type__c": {
+      "displayValue": null,
+      "value": null
+    },
+    "npe03__Total_Paid_Installments__c": {
+      "displayValue": null,
+      "value": 12
+    },
+    "npe03__Total__c": {
+      "displayValue": "$0.00",
+      "value": 0
+    }
+  }
+}

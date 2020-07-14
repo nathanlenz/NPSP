@@ -15,6 +15,7 @@ Referenced Packages
 /installdeploy
 /installedPackages
 /org_unpackaged
+/node_modules
 /src.orig
 /unpackaged/*/*/*.zip
 /unpackaged/namespaced_zipped
