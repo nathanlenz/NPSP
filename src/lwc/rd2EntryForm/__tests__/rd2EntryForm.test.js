@@ -62,16 +62,13 @@ describe('c-rd2-entry-form', () => {
             const buttonElement = element.shadowRoot.querySelector('lightning-button');
             expect(buttonElement.label).toBe('c.stgBtnCancel');
 
-            // Validate that the CurrencyIsoCode field renders since multi-currency is mock enabled
-            const currencyFieldDiv = element.shadowRoot.querySelector('lightning-layout-item[data-id=rd-currency-field]');
-            console.log(JSON.stringify(currencyFieldDiv));
-            expect(currencyFieldDiv.textContent).toBe('c.lblCurrency');
-
-            // return Promise.resolve().then(() => {
-            //     const div = element.shadowRoot.querySelector('.rd-field-currencycode');
-            //     console.log(div.textContent);
-            //     expect(div.textContent).toBe('Hello, World!');
-            // });
+            return Promise.resolve().then(() => {
+                // Validate that the CurrencyIsoCode field renders since multi-currency is mock enabled
+                // const currencyFieldDiv = element.shadowRoot.querySelector('lightning-layout-item[data-qa-locator=currency-field]');
+                const currencyFieldDiv = element.shadowRoot.querySelector('lightning-layout[data-qa-locator=amount-block]');
+                console.log(JSON.stringify(currencyFieldDiv));
+                expect(currencyFieldDiv.textContent).toBe('c.lblCurrency');
+            });
         });
     });
 

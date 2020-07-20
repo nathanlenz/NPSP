@@ -36,6 +36,10 @@
       "displayValue": null,
       "value": null
     },
+    "CurrencyIsoCode": {
+      "displayValue": "USD",
+      "value": "USD"
+    },
     "Day_of_Month__c": {
       "displayValue": "15",
       "value": "15"

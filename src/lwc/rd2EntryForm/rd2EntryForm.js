@@ -94,6 +94,7 @@ export default class rd2EntryForm extends LightningElement {
                 this.rdSettings = response;
                 this.customFields = response.customFieldSets;
                 this.hasCustomFields = Object.keys(this.customFields).length !== 0;
+                console.log("getSetting:" + JSON.stringify(response));
             })
             .catch((error) => {
                 this.handleError(error, true);
@@ -107,6 +108,7 @@ export default class rd2EntryForm extends LightningElement {
         */
         checkRequiredFieldPermissions()
             .then(response => {
+                console.log("checkRequiredFieldPermissions:" + JSON.stringify(response));
                 if (response === false) {
                     this.hasError = true;
                     this.errorMessage = {
@@ -122,6 +124,7 @@ export default class rd2EntryForm extends LightningElement {
     */
     @wire(getObjectInfo, { objectApiName: RECURRING_DONATION_OBJECT.objectApiName })
     wiredRecurringDonationObjectInfo(response) {
+        console.log("getObjectInfo:" + JSON.stringify(response));
         if (response.data) {
             let rdObjectInfo = response.data;
             this.setFields(rdObjectInfo.fields);
@@ -186,6 +189,7 @@ export default class rd2EntryForm extends LightningElement {
     */
     @wire(getRecord, { recordId: '$recordId', fields: '$fieldInfos' })
     wiredRecurringDonationRecord(response) {
+        console.log("getRecord:" + JSON.stringify(response));
         if (response.data) {
             this.record = response.data;
             this.header = editHeaderLabel + ' ' + this.record.fields.Name.value;
