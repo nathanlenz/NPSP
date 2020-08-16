@@ -87,18 +87,7 @@ public with sharing class BGE_DataImportBatchEntry_CTRL {
             throw new AuraHandledException('Data Import Model must receive a Batch ID.');
         }
 
-        DataImportModel dataImportModel = new DataImportModel();
-        Integer rowOffset = 0;
-
-        dataImportModel.id = batchId;
-        dataImportModel.dataImportRows = getDataImportRows(batchId, rowOffset);
-        dataImportModel.setColumns();
-        dataImportModel.labels = getBatchDataImportLabels();
-        dataImportModel.isNamespaced = String.isNotBlank(UTIL_Namespace.getNamespace());
-        dataImportModel.totalCountOfRows = getDataImportBatchTotalCount(batchId);
-
-        AggregateResult[] aggResult = getDataImportBatchTotalAmount(batchId);
-        dataImportModel.totalRowAmount = (Decimal)aggResult[0].get('amount');
+        DataImportModel dataImportModel = new DataImportModel(batchId);
 
         DataImportBatch__c batch;
         Boolean isQueryException = false;
@@ -587,6 +576,20 @@ public with sharing class BGE_DataImportBatchEntry_CTRL {
         @AuraEnabled public Decimal totalRowAmount;
         @AuraEnabled public List<UTIL_LightningComponentSupport.Notice> notices =
                 new List<UTIL_LightningComponentSupport.Notice>();
+
+        public DataImportModel() {}
+
+        public DataImportModel(Id batchId) {
+            Integer rowOffset = 0;
+            id = batchId;
+            dataImportRows = getDataImportRows(id, rowOffset);
+            setColumns();
+            labels = getBatchDataImportLabels();
+            isNamespaced = String.isNotBlank(UTIL_Namespace.getNamespace());
+            totalCountOfRows = getDataImportBatchTotalCount(id);
+            AggregateResult[] aggResult = getDataImportBatchTotalAmount(batchId);
+            totalRowAmount = (Decimal)aggResult[0].get('amount');
+        }
 
         /*******************************************************************************************************
         * @description Retrieves the related list of columns for the BGE interface
