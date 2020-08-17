@@ -282,7 +282,7 @@ public with sharing class BGE_DataImportBatchEntry_CTRL {
             DataImport__c dataImport = getDataImportRecordsByIds(batchId, new List<Id>{dataImportId})[0];
             DataImportRow processedDataImportRow = new DataImportRow(dataImport);
 
-            dataImportModel.dataImportRows = new List<DataImportRow>{processedDataImportRow};
+            dataImportModel.setDataImportRows(new List<DataImportRow>{processedDataImportRow});
 
             return JSON.serialize(dataImportModel);
         } catch (Exception ex){
@@ -324,7 +324,7 @@ public with sharing class BGE_DataImportBatchEntry_CTRL {
                 DataImportRow processedDataImportRow = new DataImportRow(di);
                 rows.add(processedDataImportRow);
             }
-            dataImportModel.dataImportRows = rows;
+            dataImportModel.setDataImportRows(rows);
 
             return JSON.serialize(dataImportModel);
         } catch (Exception ex){
@@ -597,13 +597,21 @@ public with sharing class BGE_DataImportBatchEntry_CTRL {
         public DataImportModel(Id batchId) {
             Integer rowOffset = 0;
             id = batchId;
-            dataImportRows = getDataImportRows(id, rowOffset);
+            setDataImportRows(getDataImportRows(id, rowOffset));
             setColumns();
             labels = getBatchDataImportLabels();
             isNamespaced = String.isNotBlank(UTIL_Namespace.getNamespace());
             totalCountOfRows = getDataImportBatchTotalCount(id);
             AggregateResult[] aggResult = getDataImportBatchTotalAmount(batchId);
             totalRowAmount = (Decimal)aggResult[0].get('amount');
+        }
+
+        public void setDataImportRows(List<DataImportRow> dataImportRows) {
+            this.dataImportRows = dataImportRows;
+        }
+
+        public List<DataImportRow> dataImportRows() {
+            return this.dataImportRows;
         }
 
         /*******************************************************************************************************
