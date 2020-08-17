@@ -459,7 +459,7 @@ public with sharing class BGE_DataImportBatchEntry_CTRL {
     * @return List<DataImport__c>
     */
     public static List<DataImport__c> getAllDataImportRecordsByBatchId(Id batchId) {
-        String query = getDataImportQuery(batchId, null, null, null);
+        String query = getDataImportQuery(new DataImportQuery(batchId, null, null, null));
         return Database.query(query);
     }
 
@@ -470,7 +470,7 @@ public with sharing class BGE_DataImportBatchEntry_CTRL {
     * @return List<DataImport__c>
     */
     private static List<DataImport__c> getNumOfDataImportRecordsByBatchId(Id batchId, Integer numberOfRowsToReturn) {
-        String query = getDataImportQuery(batchId, null, numberOfRowsToReturn, null);
+        String query = getDataImportQuery(new DataImportQuery(batchId, null, numberOfRowsToReturn, null));
         return Database.query(query);
     }
 
@@ -481,7 +481,7 @@ public with sharing class BGE_DataImportBatchEntry_CTRL {
     * @return List<DataImport__c>
     */
     private static List<DataImport__c> getDataImportRecordsByBatchId(Id batchId, Integer offset) {
-        String query = getDataImportQuery(batchId, null, loadSize, offset);
+        String query = getDataImportQuery(new DataImportQuery(batchId, null, loadSize, offset));
         return Database.query(query);
     }
 
@@ -492,7 +492,7 @@ public with sharing class BGE_DataImportBatchEntry_CTRL {
     * @return DataImport__c
     */
     private static List<DataImport__c> getDataImportRecordsByIds(Id batchId, List<Id> dataImportIds) {
-        String query = getDataImportQuery(batchId, dataImportIds, null, null);
+        String query = getDataImportQuery(new DataImportQuery(batchId, dataImportIds, null, null));
         return Database.query(query);
     }
 
@@ -514,7 +514,21 @@ public with sharing class BGE_DataImportBatchEntry_CTRL {
     public static List<DataImport__c> getAllDataImportRecordsForDryRunByBatchId(Id batchId) {
         String query = BDI_DataImportService.strSoqlForBatchProcess(batchId);
         return Database.query(query);
-    }    
+    }
+
+    private class DataImportQuery {
+        Id batchId;
+        List<Id> dataImportIds;
+        Integer numRows;
+        Integer offset;
+
+        public DataImportQuery(Id batchId, List<Id> dataImportIds, Integer numRows, Integer offset) {
+            this.batchId = batchId;
+            this.dataImportIds = dataImportIds;
+            this.numRows = numRows;
+            this.offset = offset;
+        }
+    }
 
     /*******************************************************************************************************
     * @description Builds DataImport__c query based on provided parameters
@@ -524,25 +538,26 @@ public with sharing class BGE_DataImportBatchEntry_CTRL {
     * @param offset Offset on the query
     * @return Query string
     */
-    public static String getDataImportQuery(Id batchId, List<Id> dataImportIds, Integer numRows, Integer offset) {
-        List<String> dataImportFields = BGE_BatchGiftEntry_UTIL.getDataImportFields(batchId);
+    public static String getDataImportQuery(DataImportQuery dataImportQuery) {
+        List<String> dataImportFields = BGE_BatchGiftEntry_UTIL.getDataImportFields
+                (dataImportQuery.batchId);
 
         String query =  'SELECT ' + String.join(dataImportFields,', ') +
                         ' FROM DataImport__c' +
                         ' WHERE NPSP_Data_Import_Batch__c = :batchId';
 
-        if (dataImportIds != null && dataImportIds.size() > 0) {
-            query += ' AND Id IN :dataImportIds';
+        if (dataImportQuery.dataImportIds != null && dataImportQuery.dataImportIds.size() > 0) {
+            query += ' AND Id IN :dataImportQuery.dataImportIds';
         }
 
         query += ' ORDER BY CreatedDate DESC';
 
-        if (numRows != null) {
-            query += ' LIMIT ' + numRows;
+        if (dataImportQuery.numRows != null) {
+            query += ' LIMIT ' + dataImportQuery.numRows;
         }
 
-        if (offset != null) {
-            query += ' OFFSET ' + offset;
+        if (dataImportQuery.offset != null) {
+            query += ' OFFSET ' + dataImportQuery.offset;
         }
 
         return query;
