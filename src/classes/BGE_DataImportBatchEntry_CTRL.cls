@@ -452,8 +452,8 @@ public with sharing class BGE_DataImportBatchEntry_CTRL {
     * @return List<DataImport__c>
     */
     public static List<DataImport__c> getAllDataImportRecordsByBatchId(Id batchId) {
-        String query = getDataImportQuery(new DataImportQuery(batchId, null, null, null));
-        return Database.query(query);
+        return Database.query(new DataImportQuery(
+                batchId, null, null, null).queryString());
     }
 
     /*******************************************************************************************************
@@ -463,8 +463,8 @@ public with sharing class BGE_DataImportBatchEntry_CTRL {
     * @return List<DataImport__c>
     */
     private static List<DataImport__c> getNumOfDataImportRecordsByBatchId(Id batchId, Integer numberOfRowsToReturn) {
-        String query = getDataImportQuery(new DataImportQuery(batchId, null, numberOfRowsToReturn, null));
-        return Database.query(query);
+        return Database.query(new DataImportQuery(
+                batchId, null, numberOfRowsToReturn, null).queryString());
     }
 
     /*******************************************************************************************************
@@ -474,8 +474,8 @@ public with sharing class BGE_DataImportBatchEntry_CTRL {
     * @return List<DataImport__c>
     */
     private static List<DataImport__c> getDataImportRecordsByBatchId(Id batchId, Integer offset) {
-        String query = getDataImportQuery(new DataImportQuery(batchId, null, loadSize, offset));
-        return Database.query(query);
+        return Database.query(new DataImportQuery(
+                batchId, null, loadSize, offset).queryString());
     }
 
     /*******************************************************************************************************
@@ -485,8 +485,8 @@ public with sharing class BGE_DataImportBatchEntry_CTRL {
     * @return DataImport__c
     */
     private static List<DataImport__c> getDataImportRecordsByIds(Id batchId, List<Id> dataImportIds) {
-        String query = getDataImportQuery(new DataImportQuery(batchId, dataImportIds, null, null));
-        return Database.query(query);
+        return Database.query(new DataImportQuery(
+                batchId, dataImportIds, null, null).queryString());
     }
 
     /*******************************************************************************************************
@@ -546,18 +546,6 @@ public with sharing class BGE_DataImportBatchEntry_CTRL {
 
             return query;
         }
-    }
-
-    /*******************************************************************************************************
-    * @description Builds DataImport__c query based on provided parameters
-    * @param batchId a Data Import Batch Id
-    * @param dataImportIds List of Data Import Ids
-    * @param numRows Limit on the query
-    * @param offset Offset on the query
-    * @return Query string
-    */
-    public static String getDataImportQuery(DataImportQuery dataImportQuery) {
-        return dataImportQuery.queryString();
     }
 
     /*******************************************************************************************************
