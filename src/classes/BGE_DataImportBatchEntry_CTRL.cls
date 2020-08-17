@@ -357,14 +357,7 @@ public with sharing class BGE_DataImportBatchEntry_CTRL {
     * @return DataImportModel updated model with total amount and number of rows
     */
     public static DataImportModel getUpdatedTotals(Id batchId) {
-        DataImportModel dataImportModel = new DataImportModel();
-
-        dataImportModel.id = batchId;
-        dataImportModel.totalCountOfRows = getDataImportBatchTotalCount(batchId);
-        AggregateResult[] aggResult = getDataImportBatchTotalAmount(batchId);
-        dataImportModel.totalRowAmount = (Decimal) aggResult[0].get('amount');
-
-        return dataImportModel;
+        return new DataImportModel(batchId);
     }
 
     /*******************************************************************************************************
