@@ -521,6 +521,31 @@ public with sharing class BGE_DataImportBatchEntry_CTRL {
             this.numRows = numRows;
             this.offset = offset;
         }
+
+        public String queryString() {
+            List<String> dataImportFields = BGE_BatchGiftEntry_UTIL.getDataImportFields
+                    (batchId);
+
+            String query =  'SELECT ' + String.join(dataImportFields,', ') +
+                    ' FROM DataImport__c' +
+                    ' WHERE NPSP_Data_Import_Batch__c = :batchId';
+
+            if (dataImportIds != null && dataImportIds.size() > 0) {
+                query += ' AND Id IN :dataImportIds';
+            }
+
+            query += ' ORDER BY CreatedDate DESC';
+
+            if (numRows != null) {
+                query += ' LIMIT ' + numRows;
+            }
+
+            if (offset != null) {
+                query += ' OFFSET ' + offset;
+            }
+
+            return query;
+        }
     }
 
     /*******************************************************************************************************
@@ -532,28 +557,7 @@ public with sharing class BGE_DataImportBatchEntry_CTRL {
     * @return Query string
     */
     public static String getDataImportQuery(DataImportQuery dataImportQuery) {
-        List<String> dataImportFields = BGE_BatchGiftEntry_UTIL.getDataImportFields
-                (dataImportQuery.batchId);
-
-        String query =  'SELECT ' + String.join(dataImportFields,', ') +
-                        ' FROM DataImport__c' +
-                        ' WHERE NPSP_Data_Import_Batch__c = :batchId';
-
-        if (dataImportQuery.dataImportIds != null && dataImportQuery.dataImportIds.size() > 0) {
-            query += ' AND Id IN :dataImportQuery.dataImportIds';
-        }
-
-        query += ' ORDER BY CreatedDate DESC';
-
-        if (dataImportQuery.numRows != null) {
-            query += ' LIMIT ' + dataImportQuery.numRows;
-        }
-
-        if (dataImportQuery.offset != null) {
-            query += ' OFFSET ' + dataImportQuery.offset;
-        }
-
-        return query;
+        return dataImportQuery.queryString();
     }
 
     /*******************************************************************************************************
