@@ -47,6 +47,10 @@ tasks:
             subfolder: Cumulus-LDV-Tests-master
             url: 'https://github.com/SalesforceFoundation/Cumulus-LDV-Tests/archive/master.zip'
 
+    hack_cci_sf_sep_2020:
+        task: 
+        class_path: datasets.rd2.cci_sf_hack.CCIHack
+
     deploy_ldv_tests:
         description: Deploy the LDV-Tests repo to your org.
         class_path: cumulusci.tasks.salesforce.Deploy
@@ -704,6 +708,17 @@ tasks:
                     );
                 }
 
+    generate_and_load_from_yaml_rd2:
+        class_path: cumulusci.tasks.bulkdata.generate_and_load_data_from_yaml.GenerateAndLoadDataFromYaml
+        options:
+            generator_yaml: datasets/rd2/data_recipe_with_rd2.yml
+            num_records: 1000
+            num_records_tablename: Contact
+            batch_size: 200000
+            bulk_mode: parallel
+            managed: true
+            mapping: datasets/rd2/data_recipe_with_rd2_mapping.yml
+            # working_directory: ./tmp
 
 flows:
     install_regression:
@@ -1278,6 +1293,17 @@ flows:
                     path: datasets/rd2/config_npsp_for_ldv_data_load.cls
                     apex: after_data_load();
                     managed: true
+
+    hack_generate_and_load_sep_2020:
+        description: Short term hack to workaround a bug
+        steps:
+            1: 
+                task: hack_cci_sf_sep_2020
+
+            2:
+                task: generate_and_load_from_yaml_rd2
+                options:
+                    ignore_row_errors: True
 
     ldv_data_delete_managed:
         description: Hard Delete all NPSP related data in org, disabling and reenabling triggers to reduce errors and improve performance
