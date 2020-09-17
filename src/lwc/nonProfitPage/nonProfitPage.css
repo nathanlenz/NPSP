@@ -1,0 +1,22 @@
+.main {
+    background-color: white;
+    display: flex;
+    padding: 1rem;
+}
+
+.main .principal {
+    flex: 1 0 0;
+    margin-right: 1rem;
+}
+
+.main .side-bar {
+    width: 25rem;
+}
+
+.main .side-bar > div {
+   margin-top: 1rem; 
+}
+
+.main .side-bar > div:first-child {
+    margin-top: 0;
+}

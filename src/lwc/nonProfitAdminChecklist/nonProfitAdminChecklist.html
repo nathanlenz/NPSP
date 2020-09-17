@@ -1,0 +1,15 @@
+<template>
+    <div>
+        <p class="list-title">ADMIN SETUP CHECKLIST</p>
+        <section class="slds-card">
+            <ol class="slds-setup-assistant">
+                <template iterator:checklist={checklists}>
+                    <li class="slds-setup-assistant__item" key={checklist.value.id} >
+                       <c-non-profit-admin-check-group group={checklist.value}>
+                       </c-non-profit-admin-check-group>
+                    </li>
+                </template>
+            </ol>
+        </section>
+    </div>
+</template>

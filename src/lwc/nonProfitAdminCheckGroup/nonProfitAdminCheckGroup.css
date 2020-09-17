@@ -1,0 +1,19 @@
+c-non-profit-admin-check-group-icon {
+    width: 3rem;
+}
+
+.slds-media.info {
+    margin-left: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    display: block;
+}
+
+.slds-media.info.open {
+    border-left: solid 2px lightgray;
+}
+
+.slds-media.info >  .step {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}

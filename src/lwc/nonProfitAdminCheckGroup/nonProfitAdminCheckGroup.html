@@ -1,0 +1,42 @@
+<template>
+    <article class="slds-setup-assistant__step">
+        <div class="slds-summary-detail">
+            <button class="slds-button slds-button_icon slds-m-right_x-small slds-m-top_x-small"
+                onclick={onClickOpenOrClose}
+                title={group.title}>
+                <!--<lightning-icon icon-name="symbols:switch" title={group.title}></lightning-icon>-->
+            </button>
+            <div class="slds-container_fluid">
+                <div class="slds-summary-detail__title">
+                    <div class="slds-setup-assistant__step-summary">
+                        <div class="slds-media">
+                            <c-non-profit-admin-check-group-icon label={group.id}>
+                            </c-non-profit-admin-check-group-icon>
+                            <div class="slds-media__body slds-m-top_x-small">
+                                <div class="slds-media">
+                                    <div class="slds-setup-assistant__step-summary-content slds-media__body">
+                                        <h3 class="slds-setup-assistant__step-summary-title slds-text-heading_small">
+                                            <button onclick={onClickOpenOrClose} 
+                                                class="slds-button slds-button_reset">
+                                                {group.title}
+                                            </button>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class={infoClass}>
+                            <p>{group.desc}</p>
+                            <div if:true={displaySteps} class="steps">
+                               <template iterator:step={group.steps}>
+                                    <c-non-profit-admin-check-item key={step.value.id} item={step.value}>
+                                    </c-non-profit-admin-check-item>
+                               </template>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</template>

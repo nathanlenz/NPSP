@@ -1,0 +1,17 @@
+<template>
+    <div class="container">
+        <h1>Resources</h1>
+        <div class="resource-list">
+            <template for:each={resoruces} for:item="resoruce" for:index="index">
+                <div class="resource-item" key={resoruce.id} >
+                    <div class="label">
+                        <span>{resoruce.label}</span>
+                    </div>
+                    <div class="link">
+                        <a href={resoruce.link}>{resoruce.linkLabel}</a>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

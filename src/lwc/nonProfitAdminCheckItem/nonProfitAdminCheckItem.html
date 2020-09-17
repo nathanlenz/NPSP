@@ -1,0 +1,23 @@
+<template>
+    <div class="step-card">
+        <input type="checkbox"/>
+        <div class="card-image">
+            Imagen
+        </div>
+        <div class="card-content">
+            <p class="content-time">{item.time}</p>
+            <h1 class="content-title">{item.title}</h1>
+            <div  class="content-text">
+                {item.desc}
+            </div>
+            <div class="content-footer">
+                <a if:true={hasLink}>{item.link.label}</a>
+                <div if:false={hasLink}></div>
+                <div class="contet-footer-buttons">
+                    <button if:true={hasButtonLight} class="slds-button slds-button_outline-brand">{item.buttonLight.label}</button>
+                    <button if:true={hasButtonDark} class="slds-button slds-button_brand">{item.buttonDark.label}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,23 @@
+<template >
+    <div class="slds-media__figure">
+        <div class={classRing}>
+            <div class="slds-progress-ring__progress"
+                role="progressbar" aria-valuemin="0"
+                aria-valuemax="100" aria-valuenow="100">
+                <svg viewBox="-1 -1 2 2">
+                    <circle if:true={complateIcon} class="slds-progress-ring__path" cx="0" cy="0" r="1"></circle>
+                    <path if:true={progresIcon} class="slds-progress-ring__path"   d="M 1 0 A 1 1 0 0 0 -0.48 -0.88 L 0 0"></path>
+                    <path if:true={unprogresIcon} class="slds-progress-ring__path" d="M 1 0 A 1 1 0 0 0 1.00 -0.00 L 0 0"></path>
+                </svg>
+            </div>
+            <div class="slds-progress-ring__content">
+                <span class="slds-icon_container slds-icon-utility-check" title="Complete">
+                    <svg if:true={complateIcon} class="slds-icon" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                    </svg>
+                    <span class={ringLabelClass}>{ringLabel}</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</template>
