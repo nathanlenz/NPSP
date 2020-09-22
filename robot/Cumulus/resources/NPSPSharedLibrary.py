@@ -1,5 +1,6 @@
 from cumulusci.robotframework.BaseLibrary import BaseLibrary
 from cumulusci.robotframework.utils import capture_screenshot_on_error
+import time
 
 # core locators
 locators = {
@@ -22,7 +23,7 @@ locators = {
 
 # version-specific patches
 _locators = {
-    50: {
+    "50.0": {
         'tabs': {
             'tab': "//lightning-tab-bar//li[@data-label='Details']//a"
         }
