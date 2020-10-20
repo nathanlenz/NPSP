@@ -6671,7 +6671,111 @@ If preferred, you can disable Gift Entry and instead use older Batch Gift Entry 
         <shortDescription>Title of checklist Explore Nonprofit in Get Started</shortDescription>
         <value>Explore the Nonprofit Success Pack (NPSP)</value>
     </labels>
+    <labels>
+        <fullName>gsChecklistItemCreateDonationDesc</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Description of checklist item Create Donation in Get Started</shortDescription>
+        <value>Keep track of donations, grants, or any other type of revenue so you can identify giving patterns and understand what drives giving at the constituent level. Start by learning how to enter donations into NPSP.</value>
+    </labels>
+    <labels>
+        <fullName>gsChecklistItemCreateDonationLinkLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Link Label of checklist item Create Donation in Get Started</shortDescription>
+        <value>Learn more in Trailhead</value>
+    </labels>
+    <labels>
+        <fullName>gsChecklistItemCreateDonationPriBtnLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Link Label of checklist item Create Donation in Get Started</shortDescription>
+        <value>Watch Video</value>
+    </labels>
+    <labels>
+        <fullName>gsChecklistItemCreateDonationTitle</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Title of checklist item Create Donation in Get Started</shortDescription>
+        <value>Create a Donation</value>
+    </labels>
+    <labels>
+        <fullName>gsChecklistItemSetupContactDesc</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Description of checklist item Setup Contact in Get Started</shortDescription>
+        <value>People are the most important resource for a nonprofit, so understanding the Contact Object is especially important. Learn how to add relevant constituent data (e.g. a name, address, or employer) into your Salesforce instance.</value>
+    </labels>
+    <labels>
+        <fullName>gsChecklistItemSetupContactPriBtnLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Button label of checklist item Setup Contact in Get Started</shortDescription>
+        <value>Create Household</value>
+    </labels>
      <labels>
+        <fullName>gsChecklistItemSetupContactLinkLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Link label of checklist item Setup Contact in Get Started</shortDescription>
+        <value>Learn more on Trailhead</value>
+    </labels>
+    <labels>
+        <fullName>gsChecklistItemSetupContactSecBtnLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Button label of checklist item Setup Contact in Get Started</shortDescription>
+        <value>Explore Contacts</value>
+    </labels>
+    <labels>
+        <fullName>gsChecklistItemSetupContactTitle</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Title of checklist item Setup Contact in Get Started</shortDescription>
+        <value>Setup Contact and Household</value>
+    </labels>
+    <labels>
+        <fullName>gsChecklistItemStayTrackDesc</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Description of checklist item Stay Track in Get Started</shortDescription>
+        <value>&quot;Activities“ refers to tasks, events, or any other interaction that’s tracked in the Activity Timeline. Understanding these will allow you to keep track of every interaction with your constituents. Learn how to leverage activities to log constituent interactions and assign tasks.</value>
+    </labels>
+    <labels>
+        <fullName>gsChecklistItemStayTrackLinkLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Link Label of checklist item Stay Track in Get Started</shortDescription>
+        <value>Learn more about Activities in Trailhead</value>
+    </labels>
+    <labels>
+        <fullName>gsChecklistItemStayTrackPriBtnLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Button label of checklist item Stay Track in Get Started</shortDescription>
+        <value>Create Activities</value>
+    </labels>
+    <labels>
+        <fullName>gsChecklistItemStayTrackTitle</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Title of checklist item Stay Track in Get Started</shortDescription>
+        <value>Stay on Track with Activities</value>
+    </labels>
+    <labels>
         <fullName>gsChecklistMakeItYourDesc</fullName>
         <categories>Adoption, Group, Description</categories>
         <language>en_US</language>
@@ -6702,6 +6806,126 @@ If preferred, you can disable Gift Entry and instead use older Batch Gift Entry 
         <protected>true</protected>
         <shortDescription>Title of checklist User Onboard in Get Started</shortDescription>
         <value>Onboard Your Users</value>
+    </labels>
+     <labels>
+        <fullName>gsResourcesTitle</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>The page title in the Get Started Resources section</shortDescription>
+        <value>Resources</value>
+    </labels>
+    <labels>
+        <fullName>gsResourcesItemNonprofitCloudLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Resource Nonprofit Cloud label in Get Started Resources section</shortDescription>
+        <value>Nonprofit Cloud Basics</value>
+    </labels>
+    <labels>
+        <fullName>gsResourcesItemNonprofitCloudLinkLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Resource Nonprofit Cloud link label in Get Started Resources section</shortDescription>
+        <value>Get to Know Nonprofit Cloud</value>
+    </labels>
+    <labels>
+        <fullName>gsResourcesItemFundraisingLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Resource Fundraising label in Get Started Resources section</shortDescription>
+        <value>Fundraising Learning Path</value>
+    </labels>
+    <labels>
+        <fullName>gsResourcesItemFundraisingLinkLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Resource Fundraising link label in Get Started Resources section</shortDescription>
+        <value>Start Fundraising</value>
+    </labels>
+    <labels>
+        <fullName>gsResourcesItemProgramManagementLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Resource Program Management label in Get Started Resources section</shortDescription>
+        <value>Program Management Learning Path</value>
+    </labels>
+    <labels>
+        <fullName>gsResourcesItemProgramManagementLinkLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Resource Program Management link label in Get Started Resources section</shortDescription>
+        <value>Get Started</value>
+    </labels>
+    <labels>
+        <fullName>gsResourcesItemMarketingEngagementLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Resource Marketing Engagement label in Get Started Resources section</shortDescription>
+        <value>Marketing/Engagement Learning Path</value>
+    </labels>
+    <labels>
+        <fullName>gsResourcesItemMarketingEngagementLinkLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Resource Marketing Engagement link label in Get Started Resources section</shortDescription>
+        <value>Get Started</value>
+    </labels>
+    <labels>
+        <fullName>gsResourcesItemWebinarsLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Resource Webinars label in Get Started Resources section</shortDescription>
+        <value>Free Webinars</value>
+    </labels>
+    <labels>
+        <fullName>gsResourcesItemWebinarsLinkLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Resource Webinars link label in Get Started Resources section</shortDescription>
+        <value>Join Webinars</value>
+    </labels>
+    <labels>
+        <fullName>gsResourcesItemHubLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Resource Hub label in Get Started Resources section</shortDescription>
+        <value>Power of Us Hub</value>
+    </labels>
+    <labels>
+        <fullName>gsResourcesItemHubLinkLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Resource Hub link label in Get Started Resources section</shortDescription>
+        <value>Learn from Other Nonprofits</value>
+    </labels>
+    <labels>
+        <fullName>gsResourcesItemPartnersLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Resource Partners label in Get Started Resources section</shortDescription>
+        <value>Implementation Partners</value>
+    </labels>
+    <labels>
+        <fullName>gsResourcesItemPartnersLinkLabel</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Resource Partners link label in Get Started Resources section</shortDescription>
+        <value>Find a Partner</value>
     </labels>
     <labels>
         <fullName>commonFieldsNotFound</fullName>
@@ -13052,221 +13276,5 @@ Note: The NPSP Settings tab is visible in the Nonprofit Success Pack application
         <protected>false</protected>
         <shortDescription>stgValidationHHAccountHHRules</shortDescription>
         <value>The Account Model is set to &apos;Household Account&apos;, which requires Household Rules to be set to &apos;No Contacts&apos;.   When using Household Accounts, there is no need to have an additional Household Object.</value>
-    </labels>
-     <labels>
-        <fullName>gsResourcesTitle</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>The page title in the Get Started Resources section</shortDescription>
-        <value>Resources</value>
-    </labels>
-    <labels>
-        <fullName>gsResourcesItemNonprofitCloudLabel</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Resource Nonprofit Cloud label in Get Started Resources section</shortDescription>
-        <value>Nonprofit Cloud Basics</value>
-    </labels>
-    <labels>
-        <fullName>gsResourcesItemNonprofitCloudLinkLabel</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Resource Nonprofit Cloud link label in Get Started Resources section</shortDescription>
-        <value>Get to Know Nonprofit Cloud</value>
-    </labels>
-    <labels>
-        <fullName>gsResourcesItemFundraisingLabel</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Resource Fundraising label in Get Started Resources section</shortDescription>
-        <value>Fundraising Learning Path</value>
-    </labels>
-    <labels>
-        <fullName>gsResourcesItemFundraisingLinkLabel</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Resource Fundraising link label in Get Started Resources section</shortDescription>
-        <value>Start Fundraising</value>
-    </labels>
-    <labels>
-        <fullName>gsResourcesItemProgramManagementLabel</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Resource Program Management label in Get Started Resources section</shortDescription>
-        <value>Program Management Learning Path</value>
-    </labels>
-    <labels>
-        <fullName>gsResourcesItemProgramManagementLinkLabel</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Resource Program Management link label in Get Started Resources section</shortDescription>
-        <value>Get Started</value>
-    </labels>
-    <labels>
-        <fullName>gsResourcesItemMarketingEngagementLabel</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Resource Marketing Engagement label in Get Started Resources section</shortDescription>
-        <value>Marketing/Engagement Learning Path</value>
-    </labels>
-    <labels>
-        <fullName>gsResourcesItemMarketingEngagementLinkLabel</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Resource Marketing Engagement link label in Get Started Resources section</shortDescription>
-        <value>Get Started</value>
-    </labels>
-    <labels>
-        <fullName>gsResourcesItemWebinarsLabel</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Resource Webinars label in Get Started Resources section</shortDescription>
-        <value>Free Webinars</value>
-    </labels>
-    <labels>
-        <fullName>gsResourcesItemWebinarsLinkLabel</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Resource Webinars link label in Get Started Resources section</shortDescription>
-        <value>Join Webinars</value>
-    </labels>
-    <labels>
-        <fullName>gsResourcesItemHubLabel</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Resource Hub label in Get Started Resources section</shortDescription>
-        <value>Power of Us Hub</value>
-    </labels>
-    <labels>
-        <fullName>gsResourcesItemHubLinkLabel</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Resource Hub link label in Get Started Resources section</shortDescription>
-        <value>Learn from Other Nonprofits</value>
-    </labels>
-    <labels>
-        <fullName>gsResourcesItemPartnersLabel</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Resource Partners label in Get Started Resources section</shortDescription>
-        <value>Implementation Partners</value>
-    </labels>
-    <labels>
-        <fullName>gsResourcesItemPartnersLinkLabel</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Resource Partners link label in Get Started Resources section</shortDescription>
-        <value>Find a Partner</value>
-    </labels>
-    <labels>
-        <fullName>gsChecklistItemSetupContactTitle</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Title of checklist item Setup Contact in Get Started</shortDescription>
-        <value>Setup Contact and Household</value>
-    </labels>
-    <labels>
-        <fullName>gsChecklistItemSetupContactDesc</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Description of checklist item Setup Contact in Get Started</shortDescription>
-        <value>People are the most important resource for a nonprofit, so understanding the Contact Object is especially important. Learn how to add relevant constituent data (e.g. a name, address, or employer) into your Salesforce instance.</value>
-    </labels>
-     <labels>
-        <fullName>gsChecklistItemSetupContactPriBtnLabel</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Button label of checklist item Setup Contact in Get Started</shortDescription>
-        <value>Create Household</value>
-    </labels>
-     <labels>
-        <fullName>gsChecklistItemSetupContactSecBtnLabel</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Button label of checklist item Setup Contact in Get Started</shortDescription>
-        <value>Explore Contacts</value>
-    </labels>
-    <labels>
-        <fullName>gsChecklistItemStayTrackTitle</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Title of checklist item Stay Track in Get Started</shortDescription>
-        <value>Stay on Track with Activities</value>
-    </labels>
-    <labels>
-        <fullName>gsChecklistItemStayTrackDesc</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Description of checklist item Stay Track in Get Started</shortDescription>
-        <value>"Activities“ refers to tasks, events, or any other interaction that’s tracked in the Activity Timeline. Understanding these will allow you to keep track of every interaction with your constituents. Learn how to leverage activities to log constituent interactions and assign tasks.</value>
-    </labels>
-        <labels>
-        <fullName>gsChecklistItemStayTrackLinkLabel</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Link Label of checklist item Stay Track in Get Started</shortDescription>
-        <value>Learn more about Activities in Trailhead</value>
-    </labels>
-    <labels>
-        <fullName>gsChecklistItemStayTrackPriBtnLabel</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Button label of checklist item Stay Track in Get Started</shortDescription>
-        <value>Create Activities</value>
-    </labels>
-    <labels>
-        <fullName>gsChecklistItemCreateDonationTitle</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Title of checklist item Create Donation in Get Started</shortDescription>
-        <value>Create a Donation</value>
-    </labels>
-    <labels>
-        <fullName>gsChecklistItemCreateDonationDesc</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Description of checklist item Create Donation in Get Started</shortDescription>
-        <value>Keep track of donations, grants, or any other type of revenue so you can identify giving patterns and understand what drives giving at the constituent level. Start by learning how to enter donations into NPSP.</value>
-    </labels>
-    <labels>
-        <fullName>gsChecklistItemCreateDonationLinkLabel</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Link Label of checklist item Create Donation in Get Started</shortDescription>
-        <value>Learn more in Trailhead</value>
-    </labels>
-    <labels>
-        <fullName>gsChecklistItemCreateDonationPriBtnLabel</fullName>
-        <categories>Get Started Page</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Link Label of checklist item Create Donation in Get Started</shortDescription>
-        <value>Watch Video</value>
-    </labels>
+    </labels> 
 </CustomLabels>

@@ -2463,6 +2463,7 @@
         <members>gsChecklistItemCreateDonationPriBtnLabel</members>
         <members>gsChecklistItemCreateDonationTitle</members>
         <members>gsChecklistItemSetupContactDesc</members>
+        <members>gsChecklistItemSetupContactLinkLabel</members>
         <members>gsChecklistItemSetupContactPriBtnLabel</members>
         <members>gsChecklistItemSetupContactSecBtnLabel</members>
         <members>gsChecklistItemSetupContactTitle</members>
@@ -3265,7 +3266,7 @@
         <members>Data_Import_Object_Mapping.Opportunity_Contact_Role_2</members>
         <members>Data_Import_Object_Mapping.Payment</members>
         <members>Data_Import_Object_Mapping_Set.Default_Object_Mapping_Set</members>
-        <members>GS_Admin_Checklist_Item.Createa_Donation</members>
+        <members>GS_Admin_Checklist_Item.Create_a_Donation</members>
         <members>GS_Admin_Checklist_Item.Setup_Contact</members>
         <members>GS_Admin_Checklist_Item.Stay_Track</members>
         <members>GS_Admin_Checklist_Section.Bring_Users_Onboard</members>
