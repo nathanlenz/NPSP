@@ -6704,6 +6704,14 @@ If preferred, you can disable Gift Entry and instead use older Batch Gift Entry 
         <value>Create a Donation</value>
     </labels>
     <labels>
+        <fullName>gsChecklistItemExtraOneMinuteVideo</fullName>
+        <categories>Get Started Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Extra Info in the Item &apos;1 Minute Video&apos;</shortDescription>
+        <value>1 Minute Video</value>
+    </labels>
+    <labels>
         <fullName>gsChecklistItemSetupContactDesc</fullName>
         <categories>Get Started Page</categories>
         <language>en_US</language>
@@ -7879,6 +7887,7 @@ If preferred, you can disable Gift Entry and instead use older Batch Gift Entry 
         <shortDescription>Gift Processing configuration error</shortDescription>
         <value>Your org is missing required configuration for Gift Processing. Contact your admin for help.</value>
     </labels>
+
     <labels>
         <fullName>healthButtonRun</fullName>
         <categories>Health Check</categories>
