@@ -769,7 +769,7 @@
     </fields>
     <fields>
         <fullName>Acknowledgment_Status__c</fullName>
-        <description>The acknowledgement status of this Opportunity. </description>
+        <description>The acknowledgement status of this Opportunity.</description>
         <externalId>false</externalId>
         <inlineHelpText>The acknowledgement status of this Opportunity.</inlineHelpText>
         <label>Acknowledgment Status</label>
